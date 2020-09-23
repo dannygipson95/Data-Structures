@@ -34,10 +34,8 @@ class LinkedList:
             self.tail = new_node
 
     def remove_head(self):
-        # Empty list
         if self.head is None:
             return None
-        # LL of one item
         if self.head.get_next() is None:
             head = self.head
 
@@ -45,8 +43,6 @@ class LinkedList:
             self.tail = None
 
             return head.get_value()
-
-        # More than one item
 
         value = self.head.get_value()  
         self.head = self.head.get_next()
